@@ -1,6 +1,6 @@
 import React from 'react';
 
-const faculty = () => {
+const staff = () => {
   return (
     <section className=' bg-white text-gray-800 px-6 py-12'>
       <div className='max-w-4xl mx-auto text-center'>
@@ -22,4 +22,4 @@ const faculty = () => {
   );
 };
 
-export default faculty;
+export default staff;
