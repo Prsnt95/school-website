@@ -47,7 +47,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href='/news'
+              href='/gallery'
               className='hover:text-secondary transition-colors duration-200'
             >
               Gallery

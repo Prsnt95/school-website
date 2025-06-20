@@ -1,13 +1,16 @@
+'use client';
+
 import React, { useState } from 'react';
 
 import Image from 'next/image';
 
+import { Album } from '../../../types/gallery';
 import { albums } from '../../data/galleryData';
 
 const Gallery = () => {
-  const [selectedAlbum, setSelectedAlbum] = useState(null);
+  const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
 
-  const openAlbum = (album) => {
+  const openAlbum = (album: Album) => {
     setSelectedAlbum(album);
   };
 
@@ -46,9 +49,13 @@ const Gallery = () => {
                 {/* Album Cover */}
                 <div className='relative h-64 bg-gray-200 overflow-hidden'>
                   <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10' />
-                  <div className='w-full h-full bg-gray-300 flex items-center justify-center group-hover:scale-105 transition-transform duration-300'>
-                    <span className='text-gray-500 text-sm'>Album Cover</span>
-                  </div>
+                  <Image
+                    src={album.coverImage}
+                    alt={album.title}
+                    fill
+                    className='object-cover group-hover:scale-105 transition-transform duration-300'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  />
                   <div className='absolute bottom-4 left-4 z-20'>
                     <span className='text-white text-sm font-medium bg-black/30 px-2 py-1 rounded-full'>
                       {album.imageCount} photos
@@ -97,13 +104,15 @@ const Gallery = () => {
             {selectedAlbum.images.map((image, index) => (
               <div
                 key={index}
-                className='aspect-square bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer group'
+                className='aspect-square bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer group relative'
               >
-                <div className='w-full h-full bg-gray-300 flex items-center justify-center group-hover:bg-gray-400 transition-colors'>
-                  <span className='text-gray-500 text-xs'>
-                    Photo {index + 1}
-                  </span>
-                </div>
+                <Image
+                  src={image}
+                  alt={`${selectedAlbum.title} - Photo ${index + 1}`}
+                  fill
+                  className='object-cover group-hover:scale-110 transition-transform duration-300'
+                  sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw'
+                />
               </div>
             ))}
           </div>
