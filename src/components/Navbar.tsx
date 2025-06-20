@@ -12,6 +12,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href='/' className='flex items-center gap-2 !ml-2'>
           <Image src='/logo.png' alt='School Logo' width={45} height={45} />
+          Sangka Dechholing Gonpa School
         </Link>
 
         {/* Links */}
