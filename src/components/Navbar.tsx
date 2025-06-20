@@ -31,11 +31,27 @@ export default function Navbar() {
           <li className='hover:text-secondary transition-colors duration-200'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='hover:text-secondary transition-colors duration-200'>
+          {/* <li className='hover:text-secondary transition-colors duration-200'>
             <Link href='/about'>About</Link>
-          </li>
+          </li> */}
           <li className='hover:text-secondary transition-colors duration-200'>
             <Link href='/admissions'>Admissions</Link>
+          </li>
+          <li>
+            <Link
+              href='/news'
+              className='hover:text-secondary transition-colors duration-200'
+            >
+              News/Events
+            </Link>
+          </li>
+          <li>
+            <Link
+              href='/news'
+              className='hover:text-secondary transition-colors duration-200'
+            >
+              Gallery
+            </Link>
           </li>
 
           {/* Dropdown */}
@@ -66,26 +82,35 @@ export default function Navbar() {
               <div className='bg-white text-black rounded-md shadow-lg overflow-hidden border'>
                 <li>
                   <Link
+                    href='/mission'
+                    className='block px-5 py-3 hover:bg-gray-100 transition-colors duration-200'
+                  >
+                    Mission Statement
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href='/staff'
+                    className='block px-5 py-3 hover:bg-gray-100 transition-colors duration-200'
+                  >
+                    Staff Directory
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href='/admin'
+                    className='block px-5 py-3 hover:bg-gray-100 transition-colors duration-200'
+                  >
+                    Admin
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href='/contact'
                     className='block px-5 py-3 hover:bg-gray-100 transition-colors duration-200'
                   >
                     Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href='/faq'
-                    className='block px-5 py-3 hover:bg-gray-100 transition-colors duration-200'
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href='/news'
-                    className='block px-5 py-3 hover:bg-gray-100 transition-colors duration-200'
-                  >
-                    News
                   </Link>
                 </li>
               </div>

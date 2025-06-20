@@ -26,22 +26,33 @@ export default function Home() {
                         group-hover:bg-black/40'
         >
           <div className='text-center px-'>
-            <h1
-              className='text-white text-5xl md:text-6xl font-bold 
-                         drop-shadow-2xl tracking-wide
+            <p
+              className='text-white text-2xl md:text-3xl font-bold 
+                         drop-shadow-1xl tracking-wide
                          transform transition-all duration-700
                          translate-y-4 opacity-0
                          group-hover:translate-y-0 group-hover:opacity-100
                          group-hover:scale-105'
             >
               Sangka Dechholing Gonpa School
-            </h1>
+            </p>
             <div
-              className='mt-4 w-24 h-1 bg-white mx-auto rounded-full
+              className='mt-1 w-44 h-1 bg-white mx-auto rounded-full
                          transform transition-all duration-700 delay-200
                          opacity-0 scale-x-0 
                          group-hover:opacity-100 group-hover:scale-x-100'
             />
+            <h2
+              className='text-white text-5xl md:text-6xl font-bold 
+                         drop-shadow-2xl tracking-wide
+                         transform transition-all duration-700
+                         translate-y-4 opacity-0
+                         group-hover:translate-y-0 group-hover:opacity-100
+                         group-hover:scale-105
+                         mt-5'
+            >
+              Phungling, Taplejung
+            </h2>
           </div>
         </div>
       </div>
