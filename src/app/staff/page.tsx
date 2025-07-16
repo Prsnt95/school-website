@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+import Image from 'next/image';
+
 import { staffData } from '../../data/staffData';
 
 const Staff = () => {
@@ -62,7 +64,7 @@ const Staff = () => {
                 className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2'
               >
                 <div className='relative'>
-                  <img
+                  <Image
                     src={staff.image}
                     alt={staff.name}
                     className='w-full h-64 object-cover'
@@ -84,7 +86,7 @@ const Staff = () => {
           ) : (
             <div className='col-span-full text-center py-12'>
               <p className='text-gray-500 text-lg'>
-                No staff members found matching "{searchTerm}"
+                No staff members found matching &quot;{searchTerm}&quot;
               </p>
             </div>
           )}
