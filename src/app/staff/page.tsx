@@ -63,11 +63,12 @@ const Staff = () => {
                 key={staff.id}
                 className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2'
               >
-                <div className='relative'>
+                <div className='relative w-full h-64'>
                   <Image
                     src={staff.image}
                     alt={staff.name}
-                    className='w-full h-64 object-cover'
+                    fill
+                    className='object-cover rounded-t-2xl'
                   />
                   <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
                 </div>
